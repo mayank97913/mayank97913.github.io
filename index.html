@@ -114,7 +114,7 @@ main .hl, .ms .desc b.hl, .ms-panel .p-desc b.hl { color: var(--accent); }
 .fv.grow .tier:nth-child(4) { animation-delay: 360ms; }
 @keyframes pour { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: none; } }
 
-/* Image slot: shows its label until the named file exists in assets/ */
+/* Image slot: shows its label until the named image file exists */
 .ph { position: relative; display: block; overflow: hidden; border-radius: 10px; background-color: var(--surface-2); aspect-ratio: 16 / 10;
   background-image:
     linear-gradient(to top right, transparent calc(50% - 0.5px), var(--line) calc(50% - 0.5px), var(--line) calc(50% + 0.5px), transparent calc(50% + 0.5px)),
@@ -294,7 +294,7 @@ footer .links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
 
     <div class="grid">
       <article class="card">
-        <a class="ph" target="_blank" rel="noopener" href="https://drive.google.com/file/d/16kQIEmuYGfyDn814jBYP8c-W9VRKt8Rc/view?usp=sharing" tabindex="-1" aria-hidden="true"><img src="assets/helium.png" alt="" loading="lazy" width="512" height="512"><span class="cap">Checkout prototype<br>helium.png</span></a>
+        <a class="ph" target="_blank" rel="noopener" href="https://drive.google.com/file/d/16kQIEmuYGfyDn814jBYP8c-W9VRKt8Rc/view?usp=sharing" tabindex="-1" aria-hidden="true"><img src="helium.png" alt="" loading="lazy" width="512" height="512"><span class="cap">Checkout prototype<br>helium.png</span></a>
         <div class="card-body">
           <div class="card-top"><h3>Helium Smart Air</h3><span class="date">Aug 2026</span></div>
           <p class="problem">Customers paying without knowing the room-size limit or the fitting fee, and technicians who put other jobs first.</p>
@@ -314,7 +314,7 @@ footer .links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
       </article>
 
       <article class="card">
-        <a class="ph" target="_blank" rel="noopener" href="https://docs.google.com/spreadsheets/d/14FaYIhf1dSG2mcaxqVHznLg8wBlDKPfbCce43r6WbfM/edit" tabindex="-1" aria-hidden="true"><img src="assets/circle.png" alt="" loading="lazy" width="1024" height="1024"><span class="cap">QC flowchart<br>circle.png</span></a>
+        <a class="ph" target="_blank" rel="noopener" href="https://docs.google.com/spreadsheets/d/14FaYIhf1dSG2mcaxqVHznLg8wBlDKPfbCce43r6WbfM/edit" tabindex="-1" aria-hidden="true"><img src="circle.png" alt="" loading="lazy" width="1024" height="1024"><span class="cap">QC flowchart<br>circle.png</span></a>
         <div class="card-body">
           <div class="card-top"><h3>Circle</h3><span class="date">Oct 2026</span></div>
           <p class="problem">A QC process for used fridges and washing machines that still works at 20x today's scale.</p>
@@ -333,7 +333,7 @@ footer .links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
       </article>
 
       <article class="card">
-        <a class="ph" target="_blank" rel="noopener" href="https://docs.google.com/presentation/d/1SupZ3uGyVRQqfLnIpkRvmvUUMJjT4ZLY/edit?usp=drive_link" tabindex="-1" aria-hidden="true"><img src="assets/mesa.png" alt="" loading="lazy" width="1200" height="600"><span class="cap">Mesa Ledger<br>mesa.png</span></a>
+        <a class="ph" target="_blank" rel="noopener" href="https://docs.google.com/presentation/d/1SupZ3uGyVRQqfLnIpkRvmvUUMJjT4ZLY/edit?usp=drive_link" tabindex="-1" aria-hidden="true"><img src="mesa.png" alt="" loading="lazy" width="1200" height="600"><span class="cap">Mesa Ledger<br>mesa.png</span></a>
         <div class="card-body">
           <div class="card-top"><h3>Mesa School of Business</h3><span class="date">Mar 2026</span></div>
           <p class="problem">Getting students from very different backgrounds shortlisted at top startups.</p>
@@ -355,19 +355,19 @@ footer .links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
 
     <div class="grid small">
       <a class="card" target="_blank" rel="noopener" href="https://drive.google.com/file/d/1OWuEQbSw8657vx_jszV6GpDN6OBTVPOJ/view?usp=drive_link" style="text-decoration:none">
-        <span class="ph"><img src="assets/supertails.png" alt="" loading="lazy" width="320" height="320"><span class="cap">supertails.png</span></span>
+        <span class="ph"><img src="supertails.png" alt="" loading="lazy" width="320" height="320"><span class="cap">supertails.png</span></span>
         <span class="card-body"><span class="card-top"><h3>Supertails ↗</h3><span class="date">Mar 2026</span></span><span class="problem">Scaling clinics from 5-7 to 25+ without breaking unit economics</span><ul class="tags"><li>Healthcare ops</li><li>Unit economics</li></ul></span>
       </a>
       <a class="card" target="_blank" rel="noopener" href="https://drive.google.com/file/d/1HWsTxDP7-NnUVg-LvsylmcugBKxeY8lT/view?usp=drive_link" style="text-decoration:none">
-        <span class="ph"><img src="assets/firstclub.png" alt="" loading="lazy" width="1024" height="500"><span class="cap">firstclub.png</span></span>
+        <span class="ph"><img src="firstclub.png" alt="" loading="lazy" width="1024" height="500"><span class="cap">firstclub.png</span></span>
         <span class="card-body"><span class="card-top"><h3>FirstClub ↗</h3><span class="date">Mar 2026</span></span><span class="problem">Supply architecture for expanding from 10 to 35 clubhouses</span><ul class="tags"><li>Q-comm</li><li>Supply chain</li></ul></span>
       </a>
       <a class="card" target="_blank" rel="noopener" href="https://drive.google.com/file/d/1kwzfLYVUQWJTMfYE3eO5bZ8xl9Iv7UwX/view?usp=drive_link" style="text-decoration:none">
-        <span class="ph"><img src="assets/abcoffee.png" alt="" loading="lazy" width="512" height="512"><span class="cap">abcoffee.png</span></span>
+        <span class="ph"><img src="abcoffee.png" alt="" loading="lazy" width="512" height="512"><span class="cap">abcoffee.png</span></span>
         <span class="card-body"><span class="card-top"><h3>abcoffee ↗</h3><span class="date">Mar 2026</span></span><span class="problem">Building gifting and occasions into a revenue engine</span><ul class="tags"><li>Consumer</li><li>GTM</li></ul></span>
       </a>
       <a class="card" target="_blank" rel="noopener" href="https://drive.google.com/file/d/1BaI9Ykv-u6CKIu3m4iGc25cTeGb3RxMx/view" style="text-decoration:none">
-        <span class="ph contain"><img src="assets/bounce.png" alt="" loading="lazy" width="543" height="460"><span class="cap">bounce.png</span></span>
+        <span class="ph contain"><img src="bounce.png" alt="" loading="lazy" width="543" height="460"><span class="cap">bounce.png</span></span>
         <span class="card-body"><h3>Bounce Daily ↗</h3><span class="problem">Fixing the ₹/km flywheel behind rider earnings</span><ul class="tags"><li>Mobility</li><li>Supply ops</li></ul></span>
       </a>
     </div>
@@ -376,11 +376,11 @@ footer .links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
   <section id="journey" aria-labelledby="journey-title">
     <h2 class="eyebrow" id="journey-title">Journey, straight out of college in 2017</h2>
     <ol class="milestones" id="milestones">
-      <li class="ms" style="--i:0"><button class="ms-btn" type="button" aria-pressed="false"><span class="dot" aria-hidden="true"></span><span class="ms-logo"><img src="assets/urban-company.png" alt="Urban Company" width="420" height="170"></span><span class="ms-when">2017</span><span class="ms-role">Intern</span><span class="ms-co">Urban Company</span></button><p class="desc">Three months of getting as many AC technicians into the office as possible, whether that meant talking to the chai guy or the liftman.</p></li>
-      <li class="ms" style="--i:1"><button class="ms-btn" type="button" aria-pressed="false"><span class="dot" aria-hidden="true"></span><span class="ms-logo"><img src="assets/urban-company.png" alt="Urban Company" width="420" height="170"></span><span class="ms-when">2018 – 2019</span><span class="ms-role">Associate</span><span class="ms-co">Urban Company</span></button><p class="desc">Ran the plumber, electrician and carpenter categories, from onboarding to quality.</p></li>
-      <li class="ms" style="--i:2"><button class="ms-btn" type="button" aria-pressed="false"><span class="dot" aria-hidden="true"></span><span class="ms-logo"><img src="assets/urban-company.png" alt="Urban Company" width="420" height="170"></span><span class="ms-when">2019 – 2021</span><span class="ms-role">Category Manager</span><span class="ms-co">Urban Company</span></button><p class="desc">Everything supply for AC service and repairs: onboarding, churn, retention, NPS and utilization. <b class="hl">400 AC technicians.</b></p></li>
+      <li class="ms" style="--i:0"><button class="ms-btn" type="button" aria-pressed="false"><span class="dot" aria-hidden="true"></span><span class="ms-logo"><img src="urban-company.png" alt="Urban Company" width="420" height="170"></span><span class="ms-when">2017</span><span class="ms-role">Intern</span><span class="ms-co">Urban Company</span></button><p class="desc">Three months of getting as many AC technicians into the office as possible, whether that meant talking to the chai guy or the liftman.</p></li>
+      <li class="ms" style="--i:1"><button class="ms-btn" type="button" aria-pressed="false"><span class="dot" aria-hidden="true"></span><span class="ms-logo"><img src="urban-company.png" alt="Urban Company" width="420" height="170"></span><span class="ms-when">2018 – 2019</span><span class="ms-role">Associate</span><span class="ms-co">Urban Company</span></button><p class="desc">Ran the plumber, electrician and carpenter categories, from onboarding to quality.</p></li>
+      <li class="ms" style="--i:2"><button class="ms-btn" type="button" aria-pressed="false"><span class="dot" aria-hidden="true"></span><span class="ms-logo"><img src="urban-company.png" alt="Urban Company" width="420" height="170"></span><span class="ms-when">2019 – 2021</span><span class="ms-role">Category Manager</span><span class="ms-co">Urban Company</span></button><p class="desc">Everything supply for AC service and repairs: onboarding, churn, retention, NPS and utilization. <b class="hl">400 AC technicians.</b></p></li>
       <li class="ms pause" style="--i:3"><button class="ms-btn" type="button" aria-pressed="false"><span class="dot" aria-hidden="true"></span><span class="ms-logo" aria-hidden="true"></span><span class="ms-when">8-9 months</span><span class="ms-role">Break</span><span class="ms-co">Between roles</span></button><p class="desc">Time off between Urban Company and Rizzle.</p></li>
-      <li class="ms" style="--i:4"><button class="ms-btn" type="button" aria-pressed="false"><span class="dot" aria-hidden="true"></span><span class="ms-logo"><img src="assets/rizzle.png" alt="Rizzle" width="248" height="133"></span><span class="ms-when">2022 – 2023</span><span class="ms-role">Associate Product Manager</span><span class="ms-co">Rizzle</span></button><p class="desc">Worked with the founders on the pivot from B2C to B2B, on Domino, a product for enterprise content creation, distribution and management.</p></li>
+      <li class="ms" style="--i:4"><button class="ms-btn" type="button" aria-pressed="false"><span class="dot" aria-hidden="true"></span><span class="ms-logo"><img src="rizzle.png" alt="Rizzle" width="248" height="133"></span><span class="ms-when">2022 – 2023</span><span class="ms-role">Associate Product Manager</span><span class="ms-co">Rizzle</span></button><p class="desc">Worked with the founders on the pivot from B2C to B2B, on Domino, a product for enterprise content creation, distribution and management.</p></li>
       <li class="ms pause" style="--i:5"><button class="ms-btn" type="button" aria-pressed="false"><span class="dot" aria-hidden="true"></span><span class="ms-logo" aria-hidden="true"></span><span class="ms-when">2 years</span><span class="ms-role">UPSC prep</span><span class="ms-co">Break</span></button><p class="desc">Always interested in understanding how this country's governance works.</p></li>
       <li class="ms current" style="--i:6"><button class="ms-btn" type="button" aria-pressed="true"><span class="dot" aria-hidden="true"></span><span class="ms-logo" aria-hidden="true"></span><span class="ms-when">Now</span><span class="ms-role">72-hour problem runs</span><span class="ms-co">Independent</span></button><p class="desc">Taking real problems from founders and sending back a plan. Looking for the next role, across tech, business and ops.</p></li>
     </ol>
@@ -394,11 +394,11 @@ footer .links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
   <section id="outside" aria-labelledby="outside-title">
     <h2 class="eyebrow" id="outside-title">Outside work</h2>
     <div class="outside">
-      <figure class="tile" tabindex="0"><span class="ph"><img src="assets/coffee.jpg" alt="A pour-over brewing on a scale" loading="lazy" width="1050" height="1400"><span class="cap">coffee.jpg</span></span><figcaption><span class="t-name">Coffee</span><span class="t-line">Monsoon Coffee Roasters, ground on a K-Ultra. Ask me for beans.</span></figcaption></figure>
-      <figure class="tile" tabindex="0"><span class="ph"><img src="assets/football.jpg" alt="Liverpool celebrating the 4-0 against Barcelona at Anfield, May 2019" loading="lazy" width="400" height="500"><span class="cap">football.jpg</span></span><figcaption><span class="t-name">Football</span><span class="t-line">Liverpool, YNWA. The 4-0 against Barcelona, on repeat.</span></figcaption></figure>
-      <figure class="tile" tabindex="0"><span class="ph"><img class="keep-color" src="assets/running.jpg" alt="Every run stacked on a map of Ahmedabad, along the Sabarmati Riverfront and around Kankaria Lake" loading="lazy" width="1080" height="1350"><span class="cap">running.jpg</span></span><figcaption><span class="t-name">Running</span><span class="t-line">Sub-25 for 5 km. Longest run so far, 21 km.</span></figcaption></figure>
-      <figure class="tile" tabindex="0"><span class="ph"><img src="assets/movies.jpg" alt="A still from In the Mood for Love" loading="lazy" width="258" height="312"><span class="cap">movies.jpg</span></span><figcaption><span class="t-name">Movies</span><span class="t-line">Wong Kar-wai, Kurosawa's Cure, Udaan and Lootera.</span></figcaption></figure>
-      <figure class="tile" tabindex="0"><span class="ph"><img src="assets/reading.jpg" alt="The Remains of the Day next to a cup of coffee" loading="lazy" width="1050" height="1400"><span class="cap">reading.jpg</span></span><figcaption><span class="t-name">Reading</span><span class="t-line">The Remains of the Day and Daily Rituals, right now.</span></figcaption></figure>
+      <figure class="tile" tabindex="0"><span class="ph"><img src="coffee.jpg" alt="A pour-over brewing on a scale" loading="lazy" width="1050" height="1400"><span class="cap">coffee.jpg</span></span><figcaption><span class="t-name">Coffee</span><span class="t-line">Monsoon Coffee Roasters, ground on a K-Ultra. Ask me for beans.</span></figcaption></figure>
+      <figure class="tile" tabindex="0"><span class="ph"><img src="football.jpg" alt="Liverpool celebrating the 4-0 against Barcelona at Anfield, May 2019" loading="lazy" width="400" height="500"><span class="cap">football.jpg</span></span><figcaption><span class="t-name">Football</span><span class="t-line">Liverpool, YNWA. The 4-0 against Barcelona, on repeat.</span></figcaption></figure>
+      <figure class="tile" tabindex="0"><span class="ph"><img class="keep-color" src="running.jpg" alt="Every run stacked on a map of Ahmedabad, along the Sabarmati Riverfront and around Kankaria Lake" loading="lazy" width="1080" height="1350"><span class="cap">running.jpg</span></span><figcaption><span class="t-name">Running</span><span class="t-line">Sub-25 for 5 km. Longest run so far, 21 km.</span></figcaption></figure>
+      <figure class="tile" tabindex="0"><span class="ph"><img src="movies.jpg" alt="A still from In the Mood for Love" loading="lazy" width="258" height="312"><span class="cap">movies.jpg</span></span><figcaption><span class="t-name">Movies</span><span class="t-line">Wong Kar-wai, Kurosawa's Cure, Udaan and Lootera.</span></figcaption></figure>
+      <figure class="tile" tabindex="0"><span class="ph"><img src="reading.jpg" alt="The Remains of the Day next to a cup of coffee" loading="lazy" width="1050" height="1400"><span class="cap">reading.jpg</span></span><figcaption><span class="t-name">Reading</span><span class="t-line">The Remains of the Day and Daily Rituals, right now.</span></figcaption></figure>
     </div>
   </section>
 
