@@ -252,9 +252,44 @@ footer .links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
   .ms.current .dot::after, .fv.grow .tier, .ms-panel.swap > * { animation: none; }
   * { transition: none !important; }
 }
+
+/* Condensed spacing: tighter rhythm between and inside sections */
+main.wrap { gap: 80px; padding-block: 24px 40px; }
+.hero { gap: 48px; padding-top: 40px; }
+.eyebrow { margin-bottom: 20px; }
+.approach { gap: 48px; }
+.how { gap: 16px; }
+.tier { height: 64px; }
+.grid { gap: 16px; }
+.grid.small { margin-top: 16px; }
+.card { gap: 12px; }
+.js .ms-panel { margin-top: 24px; padding-top: 16px; min-height: 0; }
+.quote { padding-block: 0; }
+.close { gap: 16px; padding-block: 0; }
+footer.wrap { padding-block: 24px 32px; }
+@media (max-width: 620px) {
+  main.wrap { gap: 56px; padding-block: 12px 32px; }
+  .hero { padding-top: 24px; gap: 28px; }
+  .tier { height: 58px; }
+}
+
+/* Right-now strip: Ahmedabad's local time and what I'm up to */
+.live { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 20px; padding-block: 12px; border-bottom: 1px solid var(--line); font-family: var(--mono); font-size: 0.75rem; color: var(--fg-3); }
+.live b { color: var(--fg); font-weight: 400; }
+.live .pin { position: relative; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+.live .pin::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 1px solid var(--accent); animation: ping 2.4s ease-out infinite; }
+.live .first { display: inline-flex; align-items: center; gap: 10px; }
+@media (max-width: 620px) { .live .extra { display: none; } }
+@media (prefers-reduced-motion: reduce) { .live .pin::after { animation: none; } }
 </style>
 </head>
 <body>
+<div class="live wrap" aria-label="Right now">
+  <span class="first"><span class="pin" aria-hidden="true"></span><span>Ahmedabad · <b data-ist>--:--</b> <span data-diff></span></span></span>
+  <span class="extra">Reading <b>The Remains of the Day</b></span>
+  <span class="extra">Last submission <b>Circle, Oct 2026</b></span>
+  <span>Open to roles</span>
+</div>
 <main class="wrap" id="top">
   <section class="hero" aria-labelledby="hero-title">
     <h1 id="hero-title">Ops and Product Operator</h1>
@@ -554,6 +589,40 @@ document.querySelectorAll(".snap").forEach(function (box) {
     }, { threshold: 0.4 });
     io.observe(root);
   }
+})();
+
+(function liveStrip() {
+  var time = document.querySelector("[data-ist]");
+  var diff = document.querySelector("[data-diff]");
+  function draw() {
+    var now = new Date();
+    time.textContent = now.toLocaleTimeString("en-IN", { timeZone: "Asia/Kolkata", hour: "numeric", minute: "2-digit" });
+    var ist = 330, mine = -now.getTimezoneOffset(), d = ist - mine;
+    if (d === 0) { diff.textContent = "(same as you)"; return; }
+    var h = Math.floor(Math.abs(d) / 60), m = Math.abs(d) % 60;
+    diff.textContent = "(" + h + (m ? ":" + String(m).padStart(2, "0") : "") + "h " + (d > 0 ? "ahead of" : "behind") + " you)";
+  }
+  draw();
+  setInterval(draw, 30000);
+})();
+
+(function decodeLabels() {
+  if (reduceMotion || !("IntersectionObserver" in window)) return;
+  var glyphs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789·/#";
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      io.unobserve(entry.target);
+      var el = entry.target, final = el.textContent, start = performance.now(), dur = 700;
+      (function frame(t) {
+        var p = Math.min(1, (t - start) / dur), shown = Math.floor(final.length * p), s = final.slice(0, shown);
+        for (var i = shown; i < final.length; i++) s += final[i] === " " ? " " : glyphs[Math.floor(Math.random() * glyphs.length)];
+        el.textContent = s;
+        if (p < 1) requestAnimationFrame(frame); else el.textContent = final;
+      })(start);
+    });
+  }, { threshold: 0.6 });
+  document.querySelectorAll("h2.eyebrow").forEach(function (el) { io.observe(el); });
 })();
 </script>
 </body>
